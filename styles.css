@@ -1,0 +1,284 @@
+/*  This is built from a few different reset files.
+	There are currently three sections, each is a
+	modified version of the listed file.
+*/
+/*	http://meyerweb.com/eric/tools/css/reset/ 
+	v2.0 | 20110126
+	License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*! normalize.css v8.0.0 | MIT License | github.com/necolas/normalize.css */
+/*** Document ***/
+/*	1. Correct the line height in all browsers.
+	2. Prevent adjustments of font size after orientation changes in iOS.
+*/
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*** Sections ***/
+/*	Correct the font size and margin on `h1` elements within `section` and
+	`article` contexts in Chrome, Firefox, and Safari.
+*/
+h1 {
+  font-size: 2em; }
+
+/*** Grouping content ***/
+/*	1. Add the correct box sizing in Firefox.
+	2. Show the overflow in Edge and IE.
+*/
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/*	1. Correct the inheritance and scaling of font size in all browsers.
+	2. Correct the odd `em` font sizing in all browsers.
+*/
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/*** Text-level semantics ***/
+/* Remove the gray background on active links in IE 10. */
+a {
+  background-color: transparent; }
+
+/*	1. Remove the bottom border in Chrome 57-
+	2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+*/
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/* Add the correct font weight in Chrome, Edge, and Safari. */
+b,
+strong {
+  font-weight: bolder; }
+
+/*	1. Correct the inheritance and scaling of font size in all browsers.
+	2. Correct the odd `em` font sizing in all browsers.
+*/
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/* Add the correct font size in all browsers. */
+small {
+  font-size: 80%; }
+
+/*	Prevent `sub` and `sup` elements from affecting the line height in
+	all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/*** Embedded content ***/
+/* Remove the border on images inside links in IE 10. */
+img {
+  border-style: none; }
+
+/* Add the correct display in IE 10. */
+[hidden] {
+  display: none; }
+
+/*  This sets box sizing to work in a reasonable manner
+	https://css-tricks.com/box-sizing/
+*/
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/* Colors */
+/* Sizing */
+/* Styles */
+html {
+  font-size: 19px;
+  line-height: 1.3; }
+
+body {
+  color: #000;
+  background-color: #fff;
+  font-family: "Lato", "Avenir", "Gill Sans", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  text-rendering: optimizeLegibility; }
+
+#container {
+  max-width: 660px;
+  margin: 3%; }
+  @media (min-width: 750px) {
+    #container {
+      margin: 5%; } }
+  @media (min-width: 1000px) {
+    #container {
+      margin: 7%; } }
+
+header {
+  margin-bottom: 2rem;
+  color: #34352E; }
+
+nav {
+  margin-top: 0.5rem; }
+
+nav, footer {
+  text-align: right;
+  line-height: 145%; }
+
+nav ul li {
+  display: inline;
+  padding-left: 10px; }
+
+main {
+  margin-top: 2rem; }
+
+.home {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
+
+article > :last-child {
+  margin-bottom: 2rem; }
+
+.post {
+  font-family: "Charter", "Palatino", "Times New Roman", serif; }
+
+footer {
+  font-size: 16px;
+  color: #888; }
+
+#site-title {
+  padding-bottom: 0.5rem;
+  border-bottom: 4px solid #00BAFF;
+  font-size: 28px;
+  line-height: 1.2;
+  text-decoration: none; }
+
+h1 a {
+  text-decoration: none; }
+
+h1 a:hover {
+  color: inherit; }
+
+h2 {
+  font-size: 18px;
+  line-height: 145%;
+  font-weight: 600;
+  color: #00BAFF;
+  margin-top: 2rem;
+  margin-bottom: 0.25rem; }
+
+p, ul {
+  margin-bottom: 1rem; }
+
+.page li {
+  padding-bottom: 0.67rem; }
+
+a {
+  color: inherit; }
+
+a:hover {
+  color: #00BAFF; }
+
+a.active, a.active:hover {
+  color: #00BAFF;
+  text-decoration: none; }
+
+img {
+  max-width: 100%; }
+
+img.outline {
+  margin-bottom: 1rem;
+  border: 2px solid #34352E; }
+
+figure {
+  margin-bottom: 1.5rem;
+  border: 2px solid #34352E;
+  background-color: #34352E;
+  color: #fff; }
+  figure figcaption {
+    text-align: center;
+    font-size: 15.96px; }
+    figure figcaption a {
+      text-decoration: none; }
+
+a.skip-to-main {
+  clip: rect(0 0 0 0);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden; }
+
+hr {
+  border: none;
+  width: 40%;
+  height: 1px;
+  max-width: 14rem;
+  margin: 3rem auto;
+  border-top: 1px solid #00BAFF; }
+
+/*# sourceMappingURL=styles.css.map */

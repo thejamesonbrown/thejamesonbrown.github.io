@@ -1,0 +1,325 @@
+@-moz-document domain("pinboard.in") {
+/* ==UserStyle==
+@name pinboard.css
+@description A redesign of Pinboard
+@namespace http://hundredechoes.com/
+@version 0.1
+@author Jameson Brown <jamesonebrown@fea.st> (http://hundredechoes.com/)
+@license unlicense
+==/UserStyle== */
+}
+
+@-moz-document domain("pinboard.in") {
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, code, em, img, strong, sub, sup,
+dl, dt, dd, ol, ul, li, form, label, table,
+caption, tbody, tfoot, thead, tr, th, td,
+article, embed, figure, figcaption, footer,
+header, nav, section, time {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+html, body {
+    width: 100%;
+}
+
+body {
+    margin: 0 auto;
+    color: #000;
+    background-color: #fdfdfd;
+    font-family: "Lato", "Avenir", "Gill Sans",
+    			 system-ui, -apple-system, BlinkMacSystemFont,
+                 "Segoe UI", "Roboto", "Droid Sans",
+                 "Helvetica Neue", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 130%;
+    text-align: left;
+    text-rendering: optimizeLegibility;
+}
+
+.pin_logo, hr {
+    display: none;
+}
+
+#content {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#banner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 0;
+    background-color: #fdfdfd;
+    border-bottom: 2px solid #000;
+    color: #000;
+}
+
+#banner > :last-child {
+    display: none;
+}
+
+#banner a {
+    color: #000;
+}
+
+#logo {
+    width: 100%;
+    max-width: 250px;
+}
+
+#main_column {
+    width: 100%;
+    max-width: 600px;
+}
+
+#profile_main_column {
+    width: 100%;
+    max-width: 840px;
+}
+
+#main_column, #profile_main_column {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+#main_column, #profile_main_column, #right_bar, #note_right_column {
+    margin-top: 1.5rem;
+}
+
+#main_column::after,
+#right_bar::after,
+#tag_cloud::after {
+	content: '';
+	display: block;
+	clear: both;
+}
+
+#right_bar {
+	float: right;
+	margin-left: 0;
+    width: 100%;
+	max-width: 350px;
+}
+
+.user_navbar {
+	padding-left: 2px;
+}
+
+.user_navbar > * {
+    display: inline-block;
+}
+
+#tag_cloud {
+	float: right;
+}
+
+.bookmark_count_box {
+    width: 50px;
+}
+
+#bookmarks {
+    margin-top: 45px;
+}
+
+#footer {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+a#pinboard_name {
+    color: #d43226;
+    font-weight: 500;
+}
+
+#banner a.banner_username {
+	color: #000;
+    text-decoration: underline;
+}
+
+#logo > span {
+    color: #000;
+}
+
+h2, h2 a, a.blog_title {
+    color: #000;
+}
+
+.rss_linkbox {
+	float: none;
+    display: inline;
+    margin-right: 0;
+    margin-left: 1rem;
+    text-transform: lowercase;
+}
+
+a.rss_link {
+    font-size: 14px;
+}
+
+.small_username a, .small_username a:visited, a.selected,
+a.bookmark_title, a.edit:hover, a.confirm,
+.confirm > a, #per_page_picker a.per_page_selected,
+p a, p a:visited, ul a, ol a,
+#footer a, #footer a:visited,
+.tab a, .tab a:visited {
+    color: #3a7fb4;
+}
+
+.bookmark > * {
+    display: inline;
+}
+
+.bookmark, .private {
+    background-color: #fdfdfd;
+}
+
+.bookmark {
+	padding: 0;
+    width: 100%;
+    max-width: 560px;
+}
+
+.private a {
+    padding: 0;
+}
+
+/* For those whose privacy lock is off
+.private {
+    background-color: #f0f0f0;
+}
+*/
+
+a.selected {
+    background-color: #e0e0e0;
+}
+
+a.unread, a.tag {
+    color: #bd4b2b;
+}
+
+a.url_display:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+.star {
+	font-size: 110%;
+	margin-left: -18px;
+}
+
+.selected_star, a.delete:hover, a.destroy {
+    color: #ff7954;
+}
+
+.description {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-style: italic;
+    color: #000;
+}
+
+#per_page_picker a.per_page_selected {
+    background-color: inherit;
+}
+
+.signup_button {
+    margin-top: 30px;
+    height: 30px;
+}
+
+.tabs, #tab_panes {
+	width: 600px;
+}
+
+.tabs, .tab {
+    height: 23px;
+}
+
+.tab:not(.tab_selected) {
+    border-top: none;
+}
+
+.tab_selected {
+    background: #e0e0e0;
+}
+
+.tab_spacer {
+    display: none;
+}
+
+p, ul, ol {
+	margin-bottom: 1rem;
+}
+
+li {
+	margin-left: 2rem;
+}
+
+li:not(:last-child) {
+	margin-bottom: 10px;
+}
+
+#import_history_table {
+	float: right;
+	margin-top: 75px;
+    border: 1px solid #aaa;
+}
+}
+
+@-moz-document url("https://notes.pinboard.in/") {
+body {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+}
+
+@-moz-document url("https://pinboard.in/note/add/") {
+td {
+    vertical-align: top;
+}
+}
+
+@-moz-document domain("pinboard.in") {
+@media (max-width: 1024px) {
+    body {
+        max-width: 95%
+    }
+}
+
+@media (max-width: 999px) {
+    #right_bar, #tag_cloud {
+        display: none;
+    }
+    
+    #profile_right_column {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    #bookmarks {
+        margin-left: 1.2em;
+    }
+    
+    #per_page_picker {
+        margin-left: 0;
+    }
+}
+}
